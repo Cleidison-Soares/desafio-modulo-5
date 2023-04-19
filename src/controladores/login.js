@@ -20,7 +20,7 @@ const login = async (req, res) => {
         .json({ mensagem: "Email ou senha estão incorretas" });
     }
 
-    const token = jwt.sign({ id: usuario.id }, process.env.JWT_HASH, {
+    const token = jwt.sign({ id: usuario.id }, 'process.env.JWT_HASH', {
       expiresIn: "8h",
     });
 
