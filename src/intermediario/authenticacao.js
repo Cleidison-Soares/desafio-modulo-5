@@ -13,7 +13,7 @@ const filtroAutenticacao = async (req, res, next) => {
 
     try {
         const token = authorization.replace('Bearer ', '').trim()
-        const { id } = jwt.verify(token, process.env.JWT_HASH)
+        const { id } = jwt.verify(token, 'process.env.JWT_HASH')
 
         const loginUsuario = await knex("usuarios").where("id", id).first();
         if (!loginUsuario) {
