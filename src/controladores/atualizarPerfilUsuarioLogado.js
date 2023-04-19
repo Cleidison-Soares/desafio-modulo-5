@@ -1,5 +1,5 @@
-const knex = require("../conexao/knex.js");
-const bcrypt = require("bcrypt");
+const knex = require("../conexao/knex.js")
+const bcrypt = require("bcrypt")
 
 const atualizarPerfil = async (req, res) => {
   const { nome, email, senha } = req.body;
